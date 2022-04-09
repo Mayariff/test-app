@@ -1,0 +1,41 @@
+.default, .default::after  {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(to bottom, #00acee, #0072e0);
+    font-size: 16px;
+    min-width: 100px;
+    font-weight: 100;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    text-decoration: none;
+    margin:0;
+}
+.default:hover {
+    background: linear-gradient(to bottom, #00e6ee, #009de0);
+}
+.default:active{
+    background: linear-gradient(to bottom, #00a7ee, #025cb0);
+}
+
+.red {
+    padding: 2px 6px;
+    min-width: 40px;
+    font-size: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #ea2532, #c20100);
+}
+.red:hover {
+    background: linear-gradient(to bottom, rgba(234, 37, 50, 0.7), rgba(194, 1, 0, 0.8));
+}
+.red:active {
+    background: linear-gradient(to bottom, rgb(185, 28, 39), rgb(140, 2, 1));
+}
+
+.disabled{
+    background: linear-gradient(to bottom, rgba(121, 121, 121, 0.7), rgba(73, 71, 71, 0.73));
+}
+.disabled:hover{
+    background: linear-gradient(to bottom, rgba(121, 121, 121, 0.6), rgba(73, 71, 71, 0.63));
+}
