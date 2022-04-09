@@ -3,7 +3,7 @@
 
 Демо Версия:  https://mayariff.github.io/test-app/
 
-![hall](D:\test-app\src\assets\giv\project.gif)
+![hall](https://github.com/Mayariff/test-app/blob/master/src/assets/giv/project.gif)
 
 
 
