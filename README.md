@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+Технологии: react/redux/ redux thunk/ axios /хуки
+тесты: jest, storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Демо Версия:  https://mayariff.github.io/test-app/
 
-## Available Scripts
+![hall](D:\test-app\src\assets\giv\project.gif)
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+В приложении все разделено на 3 уровня: бизнес-логика, уровень работы с сервером и уровень визуальной отрисовка компонент.
+Визуальное оформление сделано на css, без дополнительных библиотек.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Концепция: лист с задачами- это отдельная самостоятельная сущность, которую в последствии можно переиспользовать с другими данными.
+Лист с задачами состоит из: заголовка; поля для добавления задач; самих задач; и меню с кнопками для их фильтрации.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+бизнес-логика: разделена на 2 части:
+1) общая для всего приложения (пока здесь только работа с ошибками и с со статусами состояния опираций ( нпр , loading для блокирования кнопок, пока выполняется опирация)
+2) относится непосредственно к листу задач (добавление , удаление задач и изменение их статуса)
 
-### `yarn build`
+уровень работы с сервером:
+1) был дан один point, поэтому здесь только get запрос за списком задач
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Уровень визуальной отрисовки компонент:
+1) компоненты, из которых рисуется лист задач
+2) универсальные компоненты (кнопки, инпуты и тд), которые можно переиспользовать для отрисовки других сущностей.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+в папках есть некоторая инкапсуляция - всё, что находится за пределами папки , обращается к ней через index, а не к отдельным файлам.
+Компоненты защищены от лишней перерисовки.
